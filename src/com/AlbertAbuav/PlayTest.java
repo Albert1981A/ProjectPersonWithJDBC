@@ -22,7 +22,7 @@ public class PlayTest {
             // CTOR Injection
             Person p2 = new Person("Ronny", "HLN", new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss").parse("26/07/1986 - 22:15:13"), Hobby.GO_TO_THE_BEACH);
 
-            Person p3 = new Person("Moshe", "RMG", DateUtils.getDate(25, 3, 2003, 12, 25, 42), Hobby.READ_BOOKS);
+            Person p3 = new Person("Moshe", "RMG", DateUtils.getDate(25, 3, 2003, 22, 2, 23), Hobby.READ_BOOKS);
 
             System.out.println(p1);
             System.out.println(p2);

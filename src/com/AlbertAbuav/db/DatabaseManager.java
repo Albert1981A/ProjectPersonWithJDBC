@@ -17,6 +17,15 @@ public class DatabaseManager {
      */
     private static final String CREATE_SCHEMA = "create schema `person_project`";
     private static final String DROP_SCHEMA = "drop schema `person_project`";
+
+//    private static final String CREATE_TABLE_PERSON = "CREATE TABLE `person_project`.`persons` (\n" +
+//            "      `id` INT NOT NULL AUTO_INCREMENT,\n" +
+//            "      `name` VARCHAR(30) NOT NULL,\n" +
+//            "      `city` VARCHAR(45) NOT NULL,\n" +
+//            "      `birthday` DATETIME NOT NULL,\n" +
+//            "      `hobby` VARCHAR(45) NULL,\n" +
+//            "      PRIMARY KEY (`id`))";
+
     private static final String CREATE_TABLE_PERSON = "CREATE TABLE `person_project`.`persons` (\n" +
             "  `id` INT NOT NULL AUTO_INCREMENT,\n" +
             "  `name` VARCHAR(30) NOT NULL,\n" +

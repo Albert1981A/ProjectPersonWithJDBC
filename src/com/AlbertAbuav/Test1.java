@@ -9,6 +9,8 @@ import com.AlbertAbuav.dbdao.PersonDBDAO;
 import com.AlbertAbuav.utils.ArtUtils;
 import com.AlbertAbuav.utils.DateUtils;
 
+import java.time.LocalDate;
+
 public class Test1 {
 
     public static void main(String[] args) {
@@ -46,9 +48,9 @@ public class Test1 {
         DatabaseManager.createTablePerson();
         // DatabaseManager.dropTablePerson();
 
-        Person p1 = new Person("Sami", "RMG", DateUtils.getDate(22, 3, 2005, 13, 42, 33), Hobby.PLAY_BASKETBALL);
-        Person p2 = new Person("Aviva", "TLV", DateUtils.getDate(11, 12, 2001, 11, 4, 3), Hobby.WATCH_MOVIES);
-        Person p3 = new Person("Johny", "RLZ", DateUtils.getDate(7, 1, 1993, 2, 52, 50), Hobby.SURF_THE_INTERNET);
+        Person p1 = new Person("Sami", "RMG", DateUtils.javaDateFromLocalDate(LocalDate.now().plusDays((int)(Math.random()*5)-2)), Hobby.PLAY_BASKETBALL);
+        Person p2 = new Person("Aviva", "TLV", DateUtils.javaDateFromLocalDate(LocalDate.now().plusDays((int)(Math.random()*5)-2)), Hobby.WATCH_MOVIES);
+        Person p3 = new Person("Johny", "RLZ", DateUtils.javaDateFromLocalDate(LocalDate.now().plusDays((int)(Math.random()*5)-2)), Hobby.SURF_THE_INTERNET);
 
         System.out.println(ArtUtils.PERSON_DAO);
 

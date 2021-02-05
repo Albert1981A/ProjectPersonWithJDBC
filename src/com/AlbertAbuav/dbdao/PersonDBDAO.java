@@ -9,7 +9,9 @@ import com.AlbertAbuav.utils.DateUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -53,6 +55,7 @@ public class PersonDBDAO implements PersonDAO {
             // Step 5
             ConnectionPool.getInstance().returnConnection(connection);
         }
+        //statement.setTimestamp(3, Timestamp.valueOf(LocalDateTime));
     }
 
     @Override

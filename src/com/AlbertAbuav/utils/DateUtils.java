@@ -2,6 +2,7 @@ package com.AlbertAbuav.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class DateUtils {
@@ -48,10 +49,20 @@ public class DateUtils {
     }
 
     /**
-     * The method convert a Java date to SQL date.
+     * The method convert a Java "Date" to SQL "Date".
      * @return
      */
     public static java.sql.Date convertJavaDateToSqlDate(Date date) {
         return new java.sql.Date(date.getTime());
     }
+
+    /**
+     * The method convert a "LocalDate" to Java "Date".
+     * @return
+     */
+    public static Date javaDateFromLocalDate(LocalDate localDate) {
+        return java.sql.Date.valueOf(localDate);
+    }
+
+
 }
