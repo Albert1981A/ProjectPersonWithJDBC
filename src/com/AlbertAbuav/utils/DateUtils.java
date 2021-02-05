@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class DateUtils {
 
-    private static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss");
+    private static final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
     /**
      * The method insert the parameters of a date and time in the local
@@ -15,14 +15,11 @@ public class DateUtils {
      * @param dd
      * @param MM
      * @param yyyy
-     * @param HH
-     * @param mm
-     * @param ss
      * @return Date util object
      * @throws ParseException
      */
-    public static Date getDate(int dd, int MM, int yyyy, int HH, int mm, int ss) {
-        String str = String.format("%2d/%2d/%4d - %2d:%2d:%2d", dd, MM, yyyy, HH, mm, ss);
+    public static Date getDate(int dd, int MM, int yyyy) {
+        String str = String.format("%2d/%2d/%4d", dd, MM, yyyy);
         try {
             return simpleDateFormat.parse(str);
         } catch (ParseException e) {

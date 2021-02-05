@@ -12,10 +12,10 @@ public class PlayTestDate {
     public static void main(String[] args) {
 
         // Hardcoded date
-        Date date1 = DateUtils.getDate(25, 3, 2003, 22, 2, 23);
+        Date date1 = DateUtils.getDate(25, 3, 2003);
         System.out.println(DateUtils.beautifyDate(date1));
 
-        Person person = new Person("avi", "TLV", DateUtils.getDate(25, 3, 2003, 22, 2, 23), Hobby.GO_TO_THE_BEACH);
+        Person person = new Person("avi", "TLV", DateUtils.getDate(25, 3, 2003), Hobby.GO_TO_THE_BEACH);
         System.out.println(person);
 
         // getting the local date and it will be reset every time the program will turn on
